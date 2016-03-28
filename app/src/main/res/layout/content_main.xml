@@ -13,8 +13,26 @@
     tools:context="com.example.jsjavainteractinandroid.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_java_call_js_without_param"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="java调用js函数(不带参数)"/>
+        <Button
+            android:id="@+id/button_java_call_js_with_param"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="java调用js函数(带参数)"/>
+
+        <WebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
 </RelativeLayout>

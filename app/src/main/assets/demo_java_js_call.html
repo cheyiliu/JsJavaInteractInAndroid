@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script type="text/javascript">
+function java_call_js_without_param(){
+	 document.getElementById("content").innerHTML +=
+         "<br\>java调用了js函数，无参";
+}
+
+function java_call_js_with_param(arg){
+	 document.getElementById("content").innerHTML +=
+         ("<br\>java调用了js函数，参数是："+arg);
+}
+
+    </script>
+</head>
+
+<body>
+This is a test html to demo java js call. <br/><br/>
+
+<a onClick="window.jsbridge.callFromJs()">点击这里-->调用java代码，无参数</a><br/>
+<a onClick="window.jsbridge.callFromJsWithParam('来自js的参数')">点击这里-->调用java代码并传递参数</a><br/>
+
+<br/>
+<div id="content">内容显示</div>
+</body>
+</html>
